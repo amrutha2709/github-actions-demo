@@ -20,3 +20,7 @@ jobs:
 
       - name: Print Message
         run: echo "GitHub Actions is working!"
+      
+      - name: Check HTML file
+        run: test -f index.html
+ 
