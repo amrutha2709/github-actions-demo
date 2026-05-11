@@ -25,7 +25,8 @@ jobs:
         run: test -f index.html
       
       - name: Build Docker Image
-        run: docker build -t mysitee .
+        run: docker build -t mysite .  
+
 
 
  
