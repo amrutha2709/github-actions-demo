@@ -23,4 +23,7 @@ jobs:
       
       - name: Check HTML file
         run: test -f index.html
+      
+      - name: Build Docker Image
+        run: docker build -t myapp .
  
