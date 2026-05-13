@@ -26,3 +26,15 @@ jobs:
 
       - name: Push Docker Image    
         run: docker push amukiran/mysite:latest  
+      
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+    script: |
+      docker pull USERNAME/mysitee:latest
+      docker stop mycontainer || true
+      docker rm mycontainer || true
+      docker run -d --name mycontainer -p 8081:80 USERNAME/mysitee:latest
