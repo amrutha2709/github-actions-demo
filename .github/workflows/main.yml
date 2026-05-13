@@ -18,8 +18,8 @@ jobs:
       - name: Login to Docker Hub
         uses: docker/Login-action@v3     
         with: 
-          username: ${{ secrets.Docker_USERNAME }}
-          password: ${{ secrets.Docker_PASSWORD }}
+          username: ${{ secrets.amukiran}}
+          password: ${{ secrets.Devops$1289$}}
     
       - name: Build Docker Image
         run: docker build -t amukiran/mysite:latest .
